@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="phpUnitTest" basedir="." default="all">
+
+  <property name="outputDir" value="."/>
+
+  <target name="phpcpd">
+    <phpcpd minTokens="10">
+      <fileset dir="./phpfiles/">
+          <include name="**/**/*.php"/>
+      </fileset>
+      <formatter type="pmd"
+                 outfile="${outputDir}/cpd.xml"/>
+    </phpcpd>
+  </target>
+
+  <target name="phpmd">
+    <phpmd rulesets="ruleset.xml">
+      <fileset dir="./phpfiles">
+        <exclude name="exclude.php"/>
+      </fileset>
+      <formatter type="xml"
+                 outfile="${outputDir}/pmd.xml"/>
+    </phpmd>
+  </target>
+
+ <target name="phpunit">
+   <phpunit>
+     <formatter type="xml" outfile="${outputDir}/phpunit.xml"/>
+     <batchtest>
+       <fileset dir="./phpfiles/">
+         <include name="**/*Test.php"/>
+       </fileset>
+     </batchtest>
+   </phpunit>
+ </target>
+
+  <target name="phpdoc">
+    <mkdir dir="phpdoc" />
+    <phpdoc title="API Documentation"
+            destdir="./phpdoc"
+            output="HTML:Smarty:PHP">
+      <fileset dir="./phpfiles">
+      </fileset>
+    </phpdoc>
+  </target>
+
+  <target name="all" depends="phpcpd,phpmd,phpunit,phpdoc">
+  </target>
+
+</project>
