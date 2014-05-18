@@ -1,0 +1,13 @@
+language: php
+
+php:
+  - 5.5
+  - 5.4
+  
+script: phpunit -c ./test/phpunit.xml
+
+notifications:
+  email: false
+    on_success: always
+    on_failure: always
+    on_start: false
