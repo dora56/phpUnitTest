@@ -1,6 +1,7 @@
 <?PHP
 //テスト対象のクラス定義を読み込み
 require_once __DIR__ .'/../lib/User.php';
+require_once 'PHPUnit.php';
 
 class UserTest extends PHPUnit_Framework_TestCase {
 
