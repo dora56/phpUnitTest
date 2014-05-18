@@ -1,6 +1,6 @@
 <phpunit>
   <testsuites>
-    <testsuite name="phpUnit">
+    <testsuite name="User">
       <directory>./test</directory>
     </testsuite>
   </testsuites>
