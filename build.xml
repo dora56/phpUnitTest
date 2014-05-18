@@ -5,8 +5,8 @@
  <target name="phpunit">
    <phpunit3 haltonfailure="true" printsummary="true">
      <batchtest>
-       <fileset dir="./test/">
-         <include name="*Test.php"/>
+       <fileset dir="test/">
+         <include name="*test.php"/>
        </fileset>
      </batchtest>
    </phpunit3>
