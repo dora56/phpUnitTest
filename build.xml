@@ -7,7 +7,7 @@
    <phpunit3 haltonfailure="true" printsummary="true">
      <formatter type="xml" outfile="${outputDir}/phpunit.xml"/>
      <batchtest>
-       <fileset dir="Test/">
+       <fileset dir="./Test/">
          <include name="**/*Test.php"/>
        </fileset>
      </batchtest>
@@ -19,7 +19,7 @@
     <phpdoc title="API Documentation"
             destdir="./phpdoc"
             output="HTML:Smarty:PHP">
-      <fileset dir="lib/">
+      <fileset dir="./lib/">
         <include name="**/*.php" />
       </fileset>
     </phpdoc>
