@@ -1,6 +1,5 @@
 <?PHP
 //テスト対象のクラス定義を読み込み
-require_once 'PHPUnit/Framework.php';
 require_once __DIR__ .'/../lib/User.php';
 
 
