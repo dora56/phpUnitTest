@@ -1,0 +1,11 @@
+<project name="phpUnitTest" default="build" basedir="." description="This is an example buildfile for Phing.">
+    	        <target name="test">
+	                <phpunit haltonerror="true" haltonfailure="true">
+	                        <batchtest>
+	                                <fileset dir="test">
+	                                        <include name="*Test.php"/>
+	                                </fileset>
+	                        </batchtest>
+	                </phpunit>
+	        </target>
+	</project>
