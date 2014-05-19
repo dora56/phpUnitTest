@@ -1,4 +1,4 @@
-<project name="phpUnitTest" default="build" basedir="." description="This is an example buildfile for Phing.">
+<project name="phpUnitTest" default="test" basedir="." description="This is an example buildfile for Phing.">
     	        <target name="test">
 	                <phpunit haltonerror="true" haltonfailure="true">
 	                        <batchtest>
