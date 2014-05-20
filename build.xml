@@ -1,5 +1,11 @@
-<project name="phpUnitTest" default="test" basedir="." description="This is an example buildfile for Phing.">
-    	        <target name="test">
-	 
-	        </target>
+<project name="phpUnitTest" default="test" basedir="." description="This is an example buildfile for Phing.">	        
+	  <target name="test">
+32	                <phpunit haltonerror="true" haltonfailure="true">
+33	                        <batchtest>
+34	                                <fileset dir="test">
+35	                                        <include name="*Test.php"/>
+36	                                </fileset>
+37	                        </batchtest>
+38	                </phpunit>
+39	        </target>
 	</project>
