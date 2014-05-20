@@ -1,11 +1,5 @@
 <project name="phpUnitTest" default="test" basedir="." description="This is an example buildfile for Phing.">
     	        <target name="test">
-	                
-	                        <batchtest>
-	                                <fileset dir="test">
-	                                        <include name="*Test.php"/>
-	                                </fileset>
-	                        </batchtest>
-	               
+	 
 	        </target>
 	</project>
