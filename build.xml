@@ -1,11 +1,11 @@
 <project name="phpUnitTest" default="test" basedir=".">	        
 	<target name="test">
-	    <phpunit2 haltonfailure="true" printsummary="true">
+	    <phpunit haltonfailure="true" printsummary="true">
 	        <batchtest>
-	            <fileset dir="test">
+	            <fileset dir="./test">
 	                <include name="*Test.php"/>
 	            </fileset>
 	        </batchtest>
-	    </phpunit2>
+	    </phpunit>
 	</target>
 </project>
